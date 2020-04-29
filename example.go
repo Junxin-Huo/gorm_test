@@ -14,7 +14,7 @@ type UserInfo struct {
 	Hobby  string
 }
 
-func main2() {
+func main1() {
 	db, err := gorm.Open("mysql", "root:12345678@(127.0.0.1:3306)/gorm_test?charset=utf8mb4&parseTime=True&loc=Local")
 	if err != nil {
 		panic(err)
