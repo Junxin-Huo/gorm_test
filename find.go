@@ -24,7 +24,7 @@ func NameIsNotPig(db *gorm.DB) *gorm.DB {
 	return db.Where("name <> ?", "pig")
 }
 
-func main() {
+func main4() {
 	db, err := gorm.Open("mysql", "root:12345678@(127.0.0.1:3306)/gorm_test?charset=utf8mb4&parseTime=True&loc=Local")
 	if err != nil {
 		panic(err)
