@@ -70,7 +70,7 @@ func main4() {
 	//db.FirstOrCreate(&user5, User4{Name: "hjx"})
 	fmt.Printf("user5: %#v\n", user5)
 
-	var user6 User4;
+	var user6 User4
 	db.Scopes(AgeGreaterThan20, NameIsNotPig).Find(&user6)
 	fmt.Printf("user6: %#v\n", user6)
 }
