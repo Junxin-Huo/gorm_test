@@ -62,7 +62,7 @@ func main5() {
 	// 更新指定列，不更新钩子
 	db.Model(&user3).UpdateColumn("name", "hello")
 
-	// 不执行钩子
+	// 批量更新，不执行钩子
 	db.Table("user_update").Where("id IN (?)", []int{10, 11}).Updates(map[string]interface{}{"name": "hello", "age": 18})
 	// 执行钩子
 	db.Model(User5{}).Updates(User5{Name: "hello", Age: 18})
